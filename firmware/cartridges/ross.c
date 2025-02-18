@@ -79,7 +79,8 @@ FORCE_INLINE void ross_write_handler(u32 control, u32 addr, u32 data)
 static void ross_init()
 {
     
-    // C64_CRT_CONTROL(STATUS_LED_ON|CRT_PORT_16K);
+    C64_CRT_CONTROL(STATUS_LED_ON|CRT_PORT_16K);
+    crt_ptr = crt_banks[0];
 }
 
 C64_BUS_HANDLER(ross)
